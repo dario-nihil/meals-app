@@ -6,7 +6,9 @@ import { CATEGORIES } from "../data/dummy-data";
 const CategoriesScreen = ({ navigation }) => {
   const renderCategoryItem = ({ item }) => {
     const pressHandler = () => {
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+        categoryId: item.id,
+      });
     };
 
     return (
