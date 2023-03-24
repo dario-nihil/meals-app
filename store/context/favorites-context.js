@@ -16,7 +16,9 @@ export const FavoriteContextProvider = ({ children }) => {
   };
 
   const removeFavorite = (id) => {
-    setFavoriteMealIds((currentFavIds) => currentFavIds.filter(mealId !== id));
+    setFavoriteMealIds((currentFavIds) =>
+      currentFavIds.filter((mealId) => mealId !== id)
+    );
   };
 
   const value = {
